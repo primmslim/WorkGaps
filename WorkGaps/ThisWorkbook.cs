@@ -5,17 +5,24 @@ using System.Windows.Forms;
 using Microsoft.VisualStudio.Tools.Applications.Runtime;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
+using Microsoft.Office.Interop.Excel;
 
 namespace WorkGaps
 {
     public partial class ThisWorkbook
     {
+
+        
         private void ThisWorkbook_Startup(object sender, System.EventArgs e)
         {
+            
+
+           
         }
 
         private void ThisWorkbook_Shutdown(object sender, System.EventArgs e)
         {
+
         }
 
         #region VSTO Designer generated code

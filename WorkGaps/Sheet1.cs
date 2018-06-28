@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Microsoft.VisualStudio.Tools.Applications.Runtime;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
+using Microsoft.Office.Interop.Excel;
 
 namespace WorkGaps
 {
@@ -12,11 +13,15 @@ namespace WorkGaps
     {
         private void Sheet1_Startup(object sender, System.EventArgs e)
         {
+            
         }
 
         private void Sheet1_Shutdown(object sender, System.EventArgs e)
         {
         }
+
+        
+
 
         #region VSTO Designer generated code
 
@@ -26,11 +31,18 @@ namespace WorkGaps
         /// </summary>
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(Sheet1_Startup);
-            this.Shutdown += new System.EventHandler(Sheet1_Shutdown);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Startup += new System.EventHandler(this.Sheet1_Startup);
+            this.Shutdown += new System.EventHandler(this.Sheet1_Shutdown);
+
         }
 
         #endregion
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var frm = new Main();
+            frm.ShowDialog();
+        }
     }
 }
